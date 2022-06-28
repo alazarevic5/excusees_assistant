@@ -62,7 +62,7 @@ struct DesignerExcuseView: View {
                             })
                         
                         withAnimation(.easeInOut) {
-                            Text(designerExcuses.designerExcuse.excuse ).animation(.easeInOut).font(.custom("Menlo", size: 15, relativeTo: .body)).foregroundColor(Color(hex: "#C6DE41")).padding(70)
+                            Text(designerExcuses.designerExcuse.excuse ).animation(.easeInOut).font(.custom("Menlo", size: 16, relativeTo: .body)).foregroundColor(Color(hex: "#C6DE41")).padding(70)
                             .rotation3DEffect(.degrees(degrees), axis: (x: 1, y: 0, z: 0))
                         }
                     }
