@@ -29,10 +29,11 @@ struct ContentView: View {
                             ExcusesButton(title: "Developer excuses", imageName: "dev").frame(minWidth: 0, maxWidth: .infinity)
                         }
                     }
-//                    Categories()
-                    CategoriesNew()
+                    NavigationLink(destination: DiffExcusesView()) {
+                        DifferentExcusesBtn(title: "Different excuses", imageName: "different_excuses").padding(EdgeInsets(top: 10, leading: 15, bottom: 0, trailing: 15))
+                    }
+                    ActivityBtn()
                     
-
                     Divider().frame(height: 3.0).background(Color(hex: "2D6E7E")).padding(EdgeInsets(top: 10, leading: 10, bottom: 20, trailing: 10))
                     NavigationLink(destination: FavouritesView()) {
                         FavExcuseButton(title: "Favourite excuses", imageName: "star").frame(minWidth: 0, maxWidth: .infinity)
@@ -41,8 +42,11 @@ struct ContentView: View {
                 }
             }
         }
+        
         .navigationTitle("").navigationBarHidden(true)
-        }
+
+        }.navigationViewStyle(StackNavigationViewStyle())
+
     }
 }
 

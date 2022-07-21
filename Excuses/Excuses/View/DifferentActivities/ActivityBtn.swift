@@ -1,14 +1,13 @@
 //
-//  Categories.swift
+//  ActivityBtn.swift
 //  Excuses
 //
-//  Created by Aleksandra Lazarevic on 24.6.22..
+//  Created by Aleksandra Lazarevic on 28.6.22..
 //
 
 import SwiftUI
 
-struct Categories: View {
-    
+struct ActivityBtn: View {
     
     @ObservedObject var excusesVM = ExcusesViewModel()
     
@@ -22,9 +21,12 @@ struct Categories: View {
                             self.isShown.toggle()
                         }
                     }) {
-                        HStack {
-                            Image("dots")
-                            Text("Different excuses")
+                        VStack {
+                            HStack {
+                                Image("dots")
+                                Text("Activity suggestion")
+                            }
+                            Text("Make an excuse and do something else").foregroundColor(.gray).font(.caption).italic()
                         }
                     }
                     .padding()
@@ -32,17 +34,16 @@ struct Categories: View {
                     .background(.thinMaterial,
                                 in: RoundedRectangle(cornerRadius: 20, style: .continuous)).padding().shadow(color: Color(hex: "2D6E7E"), radius: 7, x: 0, y: 0)
                     if isShown {
-                        DifferentExcusesRegion().transition(.move(edge: self.isShown ? .leading : .trailing))
+                        ActivitiesRegion().transition(.move(edge: self.isShown ? .leading : .trailing))
                     }
                 }
             }
             
     }
-    
 }
 
-struct Categories_Previews: PreviewProvider {
+struct ActivityBtn_Previews: PreviewProvider {
     static var previews: some View {
-        Categories()
+        ActivityBtn()
     }
 }

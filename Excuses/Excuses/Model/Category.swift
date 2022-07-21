@@ -9,4 +9,5 @@ import Foundation
 
 struct Category: Hashable {
     var name: String
+    var systemImage: String
 }

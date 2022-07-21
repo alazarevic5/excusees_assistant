@@ -12,11 +12,12 @@ struct DifferentExcusesRegion: View {
     
     @ObservedObject var excusesVM = ExcusesViewModel()
     @ObservedObject var categoriesViewModel = CategoryViewModel()
+    
     @State private var degrees = 0.0
-    
-    @State private var filter = ""
-    
+        
     @State private var selectedCategory = "random"
+    
+    @State var isHidden = false
         
     @FetchRequest(entity: ExcuseMO.entity(),
                   sortDescriptors: [NSSortDescriptor(key: "cnt", ascending: true)])
@@ -26,32 +27,34 @@ struct DifferentExcusesRegion: View {
     
     var body: some View {
         VStack {
-            Text("Click on category name to get a new excuse.").foregroundColor(Color(hex: "C6DE41")).font(.subheadline).italic().padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
-            ScrollView (.horizontal) {
-                HStack (alignment: .center, spacing: 5) {
+            ScrollView (.horizontal, showsIndicators: false) {
+                HStack (alignment: .center, spacing: 7) {
                     ForEach (categoriesViewModel.categories, id: \.self) {
                         category in
                         
-                        // CategoryCard(title: category.name)
-                        
-                        Button(category.name.capitalized) {
+                        Button {
                             excusesVM.getExcuse(category: category.name)
                             selectedCategory = category.name
+                            isHidden = false
                             withAnimation(.spring()) {
                                 self.degrees += 360
-                                
                             }
+                        } label: {
+                            VStack (alignment: .center, spacing: 5) {
+                                Image(systemName: category.systemImage).imageScale(.medium)
+                                Text(category.name.capitalized)
+                            }
+
                         }.foregroundColor(Color(hex: "C6DE41")).padding()
-                            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
+                            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20)).overlay(self.selectedCategory == category.name ? RoundedRectangle(cornerRadius: 20).stroke(Color(hex: "2D6E7E"), lineWidth: 2) : nil).animation(.spring())
                         
                     }
                 }
             }.padding(EdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10))
             
-            if excusesVM.excuses.count > 0 {
-                withAnimation(.easeInOut) {
-                    ExcuseCard(excuseVM: excusesVM, isSaved: true
-                    ).rotation3DEffect(.degrees(degrees), axis: (x: 0, y: 1, z: 0)).gesture(DragGesture(minimumDistance: 20, coordinateSpace: .global)
+            
+            withAnimation(.spring()) {
+                    ExcuseCard(excuseVM: excusesVM).rotation3DEffect(.degrees(degrees), axis: (x: 0, y: 1, z: 0)).gesture(DragGesture(minimumDistance: 20, coordinateSpace: .global)
                         .onEnded { value in
                             let horizontalAmount = value.translation.width as CGFloat
                             let verticalAmount = value.translation.height as CGFloat
@@ -68,10 +71,18 @@ struct DifferentExcusesRegion: View {
                                     }
                                 }
                             excusesVM.getExcuse(category: selectedCategory)
-
                             }
                         })
                 }
+            if excusesVM.excuses.count > 0 {
+                Button {
+                    PersistenceController.saveExcuse(content: excusesVM.excuses.first!.excuse, category: excusesVM.excuses.first!.category)
+                    isHidden = true
+                } label: {
+                    if !PersistenceController.itemExists(excusesVM.excuses.first!.excuse) {
+                        SaveExcuse()
+                    }
+                }.opacity(isHidden ? 0 : 1).padding()
             }
         }.onAppear {
             excusesVM.getExcuse(category: "random")

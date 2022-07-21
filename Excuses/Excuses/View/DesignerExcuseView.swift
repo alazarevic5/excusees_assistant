@@ -25,7 +25,7 @@ struct DesignerExcuseView: View {
                     
                     Text("Click on category name to get a new excuse\nor swipe up/down on iPad").foregroundColor(Color(hex: "8aa4ab")).font(.subheadline).italic().padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0)).multilineTextAlignment(.center)
                     
-                    ScrollView (.horizontal) {
+                    ScrollView (.horizontal, showsIndicators: false) {
                         HStack (alignment: .center) {
                             ForEach (designerExcuses.categories.tags, id: \.self) {
                                 category in
@@ -33,7 +33,7 @@ struct DesignerExcuseView: View {
                                     designerExcuses.getDesignerExcuseByTag(tag: category)
                                     currentTag = category
                                     isHidden = false
-                                }.foregroundColor(Color(hex: "071C21")).padding().background(RoundedRectangle(cornerRadius: 10).fill(LinearGradient(colors: [Color(hex: "C6DE41"), Color(hex: "2D6E7E")], startPoint: .topLeading, endPoint: .bottomTrailing)).blur(radius: 7)).padding(5)
+                                }.foregroundColor(Color(hex: "071C21")).padding().background(RoundedRectangle(cornerRadius: 10).fill(LinearGradient(colors: [Color(hex: "C6DE41"), Color(hex: "2D6E7E")], startPoint: .topLeading, endPoint: .bottomTrailing)).blur(radius: 7)).padding(5).overlay(self.currentTag == category ? RoundedRectangle(cornerRadius: 10).stroke(Color(hex: "2D6E7E"), lineWidth: 2) : nil).animation(.easeInOut)
                             }
                         }
                     }.padding(EdgeInsets(top: 0, leading: 5, bottom: 0, trailing: 5))
@@ -62,7 +62,7 @@ struct DesignerExcuseView: View {
                             })
                         
                         withAnimation(.easeInOut) {
-                            Text(designerExcuses.designerExcuse.excuse ).animation(.easeInOut).font(.custom("Menlo", size: 16, relativeTo: .body)).foregroundColor(Color(hex: "#C6DE41")).padding(70)
+                            Text(designerExcuses.designerExcuse.excuse ).animation(.easeInOut).font(.custom("Menlo", size: 16, relativeTo: .body)).foregroundColor(Color(hex: "#C6DE41")).padding(90).frame(maxWidth: 600)
                             .rotation3DEffect(.degrees(degrees), axis: (x: 1, y: 0, z: 0))
                         }
                     }

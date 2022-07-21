@@ -14,8 +14,6 @@ struct DevExcuseView: View {
     
     @State var isHidden = false
 
-
-    
     var body: some View {
         ZStack {
             LinearGradient(colors: [Color(hex: "153B44"), Color(hex: "071C21")], startPoint: .topLeading, endPoint: .bottomTrailing).ignoresSafeArea()
@@ -35,7 +33,7 @@ struct DevExcuseView: View {
                     ZStack (alignment: .center) {
                         Image("laptop_test").resizable().aspectRatio(contentMode: .fit)
                         Text(devExcuseVM.excuse.text).font(.custom("Menlo", size: 16, relativeTo: .body)).animation(.easeInOut).foregroundColor(Color(hex: "C6DE41"))
-                            .padding(EdgeInsets(top: 30, leading: 60, bottom: 100, trailing: 60))
+                            .padding(EdgeInsets(top: 0, leading: 60, bottom: 100, trailing: 60)).frame(maxWidth: 600)
                     }
                     Button {
                         PersistenceController.saveExcuse(content: devExcuseVM.excuse.text, category: "developer")
@@ -46,7 +44,7 @@ struct DevExcuseView: View {
                         }
                     }.opacity(isHidden ? 0 : 1)
 
-                    Image("bits").resizable().clipped().aspectRatio(contentMode: .fit).padding()
+                //    Image("bits").resizable().clipped().aspectRatio(contentMode: .fit).padding()
                     .onAppear{
                         devExcuseVM.getDevExcuse()
                     }

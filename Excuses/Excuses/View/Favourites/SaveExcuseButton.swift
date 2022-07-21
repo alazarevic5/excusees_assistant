@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SaveExcuse: View {
     var body: some View {
-        Text("Save for later ☕️").foregroundColor(Color(hex: "3f9eb5")).padding()
+        Text("⭐️ Add to favourites").foregroundColor(Color(hex: "3f9eb5")).padding()
             .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
     }
 }

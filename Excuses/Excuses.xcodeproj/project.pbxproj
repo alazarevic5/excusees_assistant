@@ -23,12 +23,13 @@
 		DA26325C2867A3F70076548D /* DesignerExcuseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26325B2867A3F70076548D /* DesignerExcuseView.swift */; };
 		DA26325E2867A60F0076548D /* DesignerCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26325D2867A60F0076548D /* DesignerCategory.swift */; };
 		DA2632602867A63B0076548D /* DesignerExcusesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA26325F2867A63B0076548D /* DesignerExcusesViewModel.swift */; };
-		DA8CC5F2286AF2E300B3ED0F /* CategoriesNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CC5F1286AF2E300B3ED0F /* CategoriesNew.swift */; };
+		DA8CC5F2286AF2E300B3ED0F /* ActivityBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CC5F1286AF2E300B3ED0F /* ActivityBtn.swift */; };
 		DA8CC5F4286AF53C00B3ED0F /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CC5F3286AF53C00B3ED0F /* Activity.swift */; };
 		DA8CC5F6286AF58300B3ED0F /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CC5F5286AF58300B3ED0F /* ActivityViewModel.swift */; };
 		DA8CC5F8286AF62100B3ED0F /* ActivitiesRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CC5F7286AF62100B3ED0F /* ActivitiesRegion.swift */; };
 		DA8CC5FA286AF6BC00B3ED0F /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8CC5F9286AF6BC00B3ED0F /* ActivityCard.swift */; };
 		DA8CC5FF286B105F00B3ED0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA8CC5FE286B105F00B3ED0F /* LaunchScreen.storyboard */; };
+		DA9710BB287867400006F210 /* DifferentExcusesBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9710BA287867400006F210 /* DifferentExcusesBtn.swift */; };
 		DAD69F9428676FA400E97F30 /* DevExcusesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD69F9328676FA400E97F30 /* DevExcusesViewModel.swift */; };
 		DAD69F96286771D100E97F30 /* DevExcuseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD69F95286771D100E97F30 /* DevExcuseView.swift */; };
 		DAE36AB12868691B00FA295F /* FavExcuseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE36AB02868691A00FA295F /* FavExcuseButton.swift */; };
@@ -36,10 +37,9 @@
 		DAF8AC5B2866525D00005F85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8AC5A2866525D00005F85 /* ContentView.swift */; };
 		DAF8AC5D2866526200005F85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF8AC5C2866526200005F85 /* Assets.xcassets */; };
 		DAF8AC602866526200005F85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAF8AC5F2866526200005F85 /* Preview Assets.xcassets */; };
-		DAF8AC68286656B200005F85 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8AC67286656B200005F85 /* Categories.swift */; };
-		DAF8AC6A286656F500005F85 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8AC69286656F500005F85 /* CategoryCard.swift */; };
 		DAF8AC6C28665BC900005F85 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8AC6B28665BC900005F85 /* Helpers.swift */; };
 		DAF8AC6E2866613100005F85 /* StopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8AC6D2866613100005F85 /* StopView.swift */; };
+		DAF9F671287C862C00150066 /* DiffExcusesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF9F670287C862C00150066 /* DiffExcusesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,13 +59,14 @@
 		DA26325B2867A3F70076548D /* DesignerExcuseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerExcuseView.swift; sourceTree = "<group>"; };
 		DA26325D2867A60F0076548D /* DesignerCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerCategory.swift; sourceTree = "<group>"; };
 		DA26325F2867A63B0076548D /* DesignerExcusesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerExcusesViewModel.swift; sourceTree = "<group>"; };
-		DA8CC5F1286AF2E300B3ED0F /* CategoriesNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesNew.swift; sourceTree = "<group>"; };
+		DA8CC5F1286AF2E300B3ED0F /* ActivityBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityBtn.swift; sourceTree = "<group>"; };
 		DA8CC5F3286AF53C00B3ED0F /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		DA8CC5F5286AF58300B3ED0F /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		DA8CC5F7286AF62100B3ED0F /* ActivitiesRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesRegion.swift; sourceTree = "<group>"; };
 		DA8CC5F9286AF6BC00B3ED0F /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		DA8CC5FB286AF7DA00B3ED0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DA8CC5FE286B105F00B3ED0F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA9710BA287867400006F210 /* DifferentExcusesBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifferentExcusesBtn.swift; sourceTree = "<group>"; };
 		DAD69F9328676FA400E97F30 /* DevExcusesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExcusesViewModel.swift; sourceTree = "<group>"; };
 		DAD69F95286771D100E97F30 /* DevExcuseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevExcuseView.swift; sourceTree = "<group>"; };
 		DAE36AB02868691A00FA295F /* FavExcuseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavExcuseButton.swift; sourceTree = "<group>"; };
@@ -74,10 +75,9 @@
 		DAF8AC5A2866525D00005F85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DAF8AC5C2866526200005F85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DAF8AC5F2866526200005F85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DAF8AC67286656B200005F85 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		DAF8AC69286656F500005F85 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		DAF8AC6B28665BC900005F85 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		DAF8AC6D2866613100005F85 /* StopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopView.swift; sourceTree = "<group>"; };
+		DAF9F670287C862C00150066 /* DiffExcusesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffExcusesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,10 +137,9 @@
 		DA8CC5FC286B0D2800B3ED0F /* DifferentExcuses */ = {
 			isa = PBXGroup;
 			children = (
+				DAF9F670287C862C00150066 /* DiffExcusesView.swift */,
+				DA1ECBC9286787D700B5A25C /* DifferentExcusesRegion.swift */,
 				DA0EF8BA2866F77C0036BE9F /* ExcuseCard.swift */,
-				DAF8AC67286656B200005F85 /* Categories.swift */,
-				DA8CC5F1286AF2E300B3ED0F /* CategoriesNew.swift */,
-				DAF8AC69286656F500005F85 /* CategoryCard.swift */,
 			);
 			path = DifferentExcuses;
 			sourceTree = "<group>";
@@ -150,7 +149,7 @@
 			children = (
 				DA8CC5F9286AF6BC00B3ED0F /* ActivityCard.swift */,
 				DA8CC5F7286AF62100B3ED0F /* ActivitiesRegion.swift */,
-				DA1ECBC9286787D700B5A25C /* DifferentExcusesRegion.swift */,
+				DA8CC5F1286AF2E300B3ED0F /* ActivityBtn.swift */,
 			);
 			path = DifferentActivities;
 			sourceTree = "<group>";
@@ -206,6 +205,7 @@
 				DAF8AC6D2866613100005F85 /* StopView.swift */,
 				DA1ECBC728677A4C00B5A25C /* ExcusesButton.swift */,
 				DAE36AB02868691A00FA295F /* FavExcuseButton.swift */,
+				DA9710BA287867400006F210 /* DifferentExcusesBtn.swift */,
 				DAD69F95286771D100E97F30 /* DevExcuseView.swift */,
 				DA26325B2867A3F70076548D /* DesignerExcuseView.swift */,
 			);
@@ -287,7 +287,8 @@
 				DA13DDCC286B17FC008A7FB9 /* SaveExcuseButton.swift in Sources */,
 				DA0EF8C32866FD150036BE9F /* Excuse.swift in Sources */,
 				DAF8AC5B2866525D00005F85 /* ContentView.swift in Sources */,
-				DAF8AC6A286656F500005F85 /* CategoryCard.swift in Sources */,
+				DAF9F671287C862C00150066 /* DiffExcusesView.swift in Sources */,
+				DA9710BB287867400006F210 /* DifferentExcusesBtn.swift in Sources */,
 				DAF8AC592866525D00005F85 /* ExcusesApp.swift in Sources */,
 				DA13DDCE286B22CF008A7FB9 /* FavouritesListView.swift in Sources */,
 				DA8CC5F4286AF53C00B3ED0F /* Activity.swift in Sources */,
@@ -296,13 +297,12 @@
 				DAF8AC6E2866613100005F85 /* StopView.swift in Sources */,
 				DA0C2F302869AF780077F911 /* Excuses.xcdatamodeld in Sources */,
 				DA0EF8BB2866F77C0036BE9F /* ExcuseCard.swift in Sources */,
-				DAF8AC68286656B200005F85 /* Categories.swift in Sources */,
 				DA8CC5FA286AF6BC00B3ED0F /* ActivityCard.swift in Sources */,
 				DA1ECBCA286787D700B5A25C /* DifferentExcusesRegion.swift in Sources */,
 				DA0EF8C12866FB740036BE9F /* CategoryViewModel.swift in Sources */,
 				DA8CC5F8286AF62100B3ED0F /* ActivitiesRegion.swift in Sources */,
 				DA26325E2867A60F0076548D /* DesignerCategory.swift in Sources */,
-				DA8CC5F2286AF2E300B3ED0F /* CategoriesNew.swift in Sources */,
+				DA8CC5F2286AF2E300B3ED0F /* ActivityBtn.swift in Sources */,
 				DA0C2F322869AFDA0077F911 /* Persistance.swift in Sources */,
 				DA8CC5F6286AF58300B3ED0F /* ActivityViewModel.swift in Sources */,
 				DA26325C2867A3F70076548D /* DesignerExcuseView.swift in Sources */,
@@ -448,6 +448,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
@@ -480,6 +481,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
